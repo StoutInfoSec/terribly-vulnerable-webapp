@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Terribly Vulnerable Webapp</title>
+	<link href="./style.css" rel="stylesheet" type="text/css"/>
+</head>
+
+<body>
+	<header>
+		<!--All navigation tools in a tab-esque system-->
+		<a href=""><img src="images/crummyLogo.png" id="logo"/></a><!--replace with the real ISP logo when we reach deployment-->
+		<a href=""><h1 class="tabs">Challenges</h1></a>
+		<a href=""><h1 class="tabs">Mission</h1></a>
+		<a href=""><h1 class="tabs">Research</h1></a>
+		<a href=""><h1 class="tabs">Full Disclaimer</h1></a>
+	</header>
+	<nav>
+		<ul>
+		<!--
+			All items in the ordered list will eventually be linked to other internal webpages.
+			The unordered list objects, the section titles if you will, may or may not need links
+			as the club decides
+		-->
+		<li id="list-title"><a href=""><strong>Challenge List</strong></a></li>
+			<li class="section">SQL Injection</li>
+			<ol>
+				<li class="challenge"><a href="">Easy</a></li>
+				<li class="challenge"><a href="">Medium</a></li>
+				<li class="challenge"><a href="">Hard</a></li>
+			</ol>
+			<li class="section">IDK, some exploit</li>
+			<ol>
+				<li class="challenge"><a href="">Easy</a></li>
+				<li class="challenge"><a href="">Medium</a></li>
+				<li class="challenge"><a href="">Hard</a></li>
+			</ol>
+			<li class="section">Another Exploit</li>
+			<ol>
+				<li class="challenge"><a href="">Easy</a></li>
+				<li class="challenge"><a href="">Medium</a></li>
+				<li class="challenge"><a href="">Hard</a></li>
+			</ol>
+			<li class="section">Yet another exploit</li>
+			<ol>
+				<li class="challenge"><a href="">Easy</a></li>
+				<li class="challenge"><a href="">Medium</a></li>
+				<li class="challenge"><a href="">Hard</a></li>
+			</ol>
+			<li class="section">If you haven't guess it...</li>
+			<ol>
+				<li class="challenge"><a href="">Easy</a></li>
+				<li class="challenge"><a href="">Medium</a></li>
+				<li class="challenge"><a href="">Hard</a></li>
+			</ol>
+			<li class="section">...this is all just ...</li>
+			<ol>
+				<li class="challenge"><a href="">Easy</a></li>
+				<li class="challenge"><a href="">Medium</a></li>
+				<li class="challenge"><a href="">Hard</a></li>
+			</ol>
+			<li class="section">...placeholder text</li>
+			<ol>
+				<li class="challenge"><a href="">Easy</a></li>
+				<li class="challenge"><a href="">Medium</a></li>
+				<li class="challenge"><a href="">Hard</a></li>
+			</ol>
+		</ul>
+	</nav>
+	<div id="content">
+		<!--This is where the exploitable stuff will go, or information. It MUST be ABOVE the "userAid" div!-->
+		
+		<div id="userAid">
+			<h3 class="infoButtons">Hint?</h3> <!--This needs to have popover behavior-->
+			<h3 class="infoButtons"><a href="" target="_blank">Learn More</a></h3>
+		</div>
+	</div>
+	<footer>
+		<p id="disclaimer_summary">The UW-Stout Information Security Professionals club is not responsible for any damages that occur as a result of malicious hacking, exploitation of our code, etc. <br/>If it wasn't obvious, this information should be replaced with a REAL disclaimer summary, once we have that information.</p>
+	</footer>
+</body>
+</html>

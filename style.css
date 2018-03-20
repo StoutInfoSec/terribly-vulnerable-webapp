@@ -1,0 +1,119 @@
+@charset "utf-8";
+/* CSS Document */
+/*This enables a fun, free font to spice things up*/
+@font-face{
+	font-family: "bitwise";
+	src: url("./fonts/Bitwise/Bitwise.ttf");
+}
+
+/*Link Behavior - Meant to look identical before and after visiting the link*/
+a:link{
+	/*unvisited link*/
+	color:black;
+	text-decoration: none;
+}
+a:visited{
+	/*visited link*/
+	color:black;
+	text-decoration: none;
+}
+a:hover{
+	/*
+		While the mouse is "hovering" over the link
+		This section MUST come after a:link, and a:visited for compile purposes
+	*/
+	color: blue;
+}
+a:active{
+	/*
+		Link is selected, the mouse button is currently clicking on the link
+		This section MUST come after a:hover, for compile purposes
+	*/
+	color: rebeccapurple;
+}
+
+header{
+	width: 100%;
+	min-height: 160px;
+	height: auto;
+	background-color: aliceblue;
+}
+
+#logo{
+	height: 120px;
+	width: auto;
+	margin: 20px 30px;
+	display: inline;
+	/*border: solid black thin;*/
+	float: left;
+}
+
+nav{
+	width: 19%;
+	height: 500px;
+	overflow: scroll;
+	display: inline-block;
+	float: left;
+}
+
+footer{
+	background-color: lightgray;
+	width: 100%;
+	padding: 25px 30px;
+	clear: left;
+}
+
+#content{
+	background-color: saddlebrown;
+	width: 80%;
+	height: 493px;
+	display: inline-block;
+	
+	border: 3px black solid;
+}
+
+#list-title{
+	font-family: "bitwise";
+	font-size: 20px;
+	list-style-type: none;
+}
+
+#userAid{
+	/*The two buttons, "Hint?" and "Learn More"*/
+	background-color: hotpink;
+	height: auto;
+	width: auto;
+	float: clear;
+	float: right;
+}
+
+.tabs{
+	font-size: auto;
+	display: inline-block;
+	padding: 10px;
+	border: medium solid black;
+	border-radius: 50px;
+	margin: auto, 20px;
+	margin-left: 5%;
+	font-family: "bitwise", sans-serif;
+	clear: left;
+}
+
+.infoButtons{
+	display: inline-block;
+	padding: 10px;
+	margin: 10px 20px;
+	border: medium black solid;
+	border-radius: 10px;
+	float: right;
+}
+
+.section{
+	text-decoration: none;
+	list-style-type: none;
+}
+
+.challenge{
+	text-decoration: none;
+	color: black;
+}

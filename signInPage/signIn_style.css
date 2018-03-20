@@ -1,0 +1,45 @@
+@charset "utf-8";
+/* CSS Document */
+
+#ISP_banner{
+	width: 50%;
+	height: auto;
+	margin: 5px 25%;
+}
+
+#disclaimer{
+	background-color: lightgray;
+	
+	width: 75%;
+	height: auto;
+	padding: 15px;
+	margin: 20px auto;
+	border: solid grey medium;
+}
+#disclaimer p{
+	font-size: 16px;
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";	
+}
+#conclusion{
+	color: firebrick;
+	font-size: 24px;
+	text-align: center;
+}
+
+#signIn{
+	width: 40%;
+	margin: 10px auto;
+}
+
+#signIn input{ /*The input boxes as opposed to the container div*/
+	border: solid medium black;
+	padding: 10px;
+}
+
+#username{
+	float: left;
+}
+
+#password{
+	float: right;
+}
