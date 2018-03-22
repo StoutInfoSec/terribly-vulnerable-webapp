@@ -3,7 +3,7 @@
 /*This enables a fun, free font to spice things up*/
 @font-face{
 	font-family: "bitwise";
-	src: url("./fonts/Bitwise/Bitwise.ttf");
+	src: url("../fonts/Bitwise/Bitwise.ttf");
 }
 
 /*Link Behavior - Meant to look identical before and after visiting the link*/
@@ -36,7 +36,7 @@ header{
 	width: 100%;
 	min-height: 160px;
 	height: auto;
-	background-color: aliceblue;
+	background-color: #003B6f;
 }
 
 #logo{
@@ -64,10 +64,11 @@ footer{
 }
 
 #content{
-	background-color: saddlebrown;
+	background-color: lightgoldenrodyellow;
 	width: 80%;
 	height: 493px;
 	display: inline-block;
+	position: relative;
 	
 	border: 3px black solid;
 }
@@ -80,11 +81,11 @@ footer{
 
 #userAid{
 	/*The two buttons, "Hint?" and "Learn More"*/
-	background-color: hotpink;
 	height: auto;
 	width: auto;
-	float: clear;
-	float: right;
+	position: absolute;
+	bottom: 0;
+	right: 0;
 }
 
 .tabs{
