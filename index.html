@@ -1,82 +1,169 @@
 <!doctype html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<title>Terribly Vulnerable Webapp</title>
-	<link href="./css/style.css" rel="stylesheet" type="text/css"/>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link href="./css/style.css" rel="stylesheet" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <title>Terribly Vulnerable Webapp</title>
 </head>
-
 <body>
-	<header>
-		<!--All navigation tools in a tab-esque system-->
-		<a href=""><img src="images/crummyLogo.png" id="logo"/></a><!--replace with the real ISP logo when we reach deployment-->
-		<a href=""><h1 class="tabs">Challenges</h1></a>
-		<a href=""><h1 class="tabs">Mission</h1></a>
-		<a href=""><h1 class="tabs">Research</h1></a>
-		<a href=""><h1 class="tabs">Full Disclaimer</h1></a>
-	</header>
-	<nav>
-		<ul>
-		<!--
-			All items in the ordered list will eventually be linked to other internal webpages.
-			The unordered list objects, the section titles if you will, may or may not need links
-			as the club decides
-		-->
-		<li id="list-title"><a href=""><strong>Challenge List</strong></a></li>
-			<li class="section">SQL Injection</li>
-			<ol>
-				<li class="challenge"><a href="">Easy</a></li>
-				<li class="challenge"><a href="">Medium</a></li>
-				<li class="challenge"><a href="">Hard</a></li>
-			</ol>
-			<li class="section">IDK, some exploit</li>
-			<ol>
-				<li class="challenge"><a href="">Easy</a></li>
-				<li class="challenge"><a href="">Medium</a></li>
-				<li class="challenge"><a href="">Hard</a></li>
-			</ol>
-			<li class="section">Another Exploit</li>
-			<ol>
-				<li class="challenge"><a href="">Easy</a></li>
-				<li class="challenge"><a href="">Medium</a></li>
-				<li class="challenge"><a href="">Hard</a></li>
-			</ol>
-			<li class="section">Yet another exploit</li>
-			<ol>
-				<li class="challenge"><a href="">Easy</a></li>
-				<li class="challenge"><a href="">Medium</a></li>
-				<li class="challenge"><a href="">Hard</a></li>
-			</ol>
-			<li class="section">If you haven't guess it...</li>
-			<ol>
-				<li class="challenge"><a href="">Easy</a></li>
-				<li class="challenge"><a href="">Medium</a></li>
-				<li class="challenge"><a href="">Hard</a></li>
-			</ol>
-			<li class="section">...this is all just ...</li>
-			<ol>
-				<li class="challenge"><a href="">Easy</a></li>
-				<li class="challenge"><a href="">Medium</a></li>
-				<li class="challenge"><a href="">Hard</a></li>
-			</ol>
-			<li class="section">...placeholder text</li>
-			<ol>
-				<li class="challenge"><a href="">Easy</a></li>
-				<li class="challenge"><a href="">Medium</a></li>
-				<li class="challenge"><a href="">Hard</a></li>
-			</ol>
-		</ul>
-	</nav>
-	<div id="content">
-		<!--This is where the exploitable stuff will go, or information. It MUST be ABOVE the "userAid" div!-->
-		
-		<div id="userAid">
-			<h3 class="infoButtons">Hint?</h3> <!--This needs to have popover behavior-->
-			<h3 class="infoButtons"><a href="" target="_blank">Learn More</a></h3>
-		</div>
-	</div>
-	<footer>
-		<p id="disclaimer_summary">The UW-Stout Information Security Professionals club is not responsible for any damages that occur as a result of malicious hacking, exploitation of our code, etc. <br/>If it wasn't obvious, this information should be replaced with a REAL disclaimer summary, once we have that information.</p>
-	</footer>
+    <!--**** ~ ~ ~ Navigation Bar ~ ~ ~ *****-->
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <!-- TVA logo here -->
+                <a id="logo" class="navbar-brand" href="index.html">TVA</a>
+            </li>
+            <li class="nav-item">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse toolbar" id="collapsibleNavbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="challenges.html">Challenges</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="exploits.html">Exploits</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="payloads.html">Payloads</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="trophies.html">Trophies</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="resources.html">Resources</a>
+                        </li>
+                    </ul>
+                    <div id="search-bar">
+                        <form class="form-inline" action="/action_page.php">
+                            <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                            <button class="btn btn-success" type="submit">Search</button>
+                        </form>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    <!-- ****** ~ ~ ~ Floating Side Bar ~ ~ ~ ****** -->
+    <div id="floatingUI" class="btn-group-vertical">
+        <button type="button" class="btn btn-primary">Hint</button>
+        <button type="button" class="btn btn-primary">Difficulty</button>
+        <button type="button" class="btn btn-primary">Learn More</button>
+    </div>
+    <!-- ****** ~ ~ ~ Page Body ~ ~ ~ ****** -->
+    <div class="well well-sm">
+        <div class="jumbotron" id="page-hdr">
+            <h1>Featured</h1>
+            <p>
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum."
+            </p>
+        </div>
+        <div class="well well-lg" id="card-box">
+            <div id="body-div">
+                <div id="featured" class="media">
+                    <div id="feature-list" class="media-left">
+                        <img id="card-img" src="images/card_001.png" class="media-object" />
+                    </div>
+                    <div class="media-body">
+                        <div class="media-heading">
+                            <h3>Featured Item #1</h3>
+                            <p>
+                                "Lorem ipsum dolor sit amet, consectetur adipiscing
+                                elit, sed do eiusmod tempor incididunt ut labore et
+                                dolore magna aliqua. Ut enim ad minim veniam, quis
+                                nostrud exercitation ullamco laboris nisi ut
+                                aliquip ex ea commodo consequat. Duis aute irure
+                                dolor in reprehenderit in voluptate velit esse
+                                cillum dolore eu fugiat nulla pariatur. Excepteur
+                                sint occaecat cupidatat non proident, sunt in culpa
+                                qui officia deserunt mollit anim id est laborum."
+                            </p>
+                            <button type="button" class="btn btn-info">Feature 1</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="featured" class="media">
+                    <div class="media-body">
+                        <div class="media-heading">
+                            <h3>Featured Item #2</h3>
+                            <p>
+                                "Lorem ipsum dolor sit amet, consectetur adipiscing
+                                elit, sed do eiusmod tempor incididunt ut labore et
+                                dolore magna aliqua. Ut enim ad minim veniam, quis
+                                nostrud exercitation ullamco laboris nisi ut
+                                aliquip ex ea commodo consequat. Duis aute irure
+                                dolor in reprehenderit in voluptate velit esse
+                                cillum dolore eu fugiat nulla pariatur. Excepteur
+                                sint occaecat cupidatat non proident, sunt in culpa
+                                qui officia deserunt mollit anim id est laborum."
+                            </p>
+                            <button type="button" class="btn btn-info">Feature 2</button>
+                        </div>
+                    </div>
+                    <div id="feature-list" class="media-right">
+                        <img id="card-img" src="images/card_002.png" class="media-object" />
+                    </div>
+                </div>
+
+                <div id="featured" class="media">
+                    <div id="feature-list" class="media-left">
+                        <img id="card-img" src="images/card_003.png" class="media-object" />
+                    </div>
+                    <div class="media-body">
+                        <div class="media-heading">
+                            <h3>Featured Item #3</h3>
+                            <p>
+                                "Lorem ipsum dolor sit amet, consectetur adipiscing
+                                elit, sed do eiusmod tempor incididunt ut labore et
+                                dolore magna aliqua. Ut enim ad minim veniam, quis
+                                nostrud exercitation ullamco laboris nisi ut
+                                aliquip ex ea commodo consequat. Duis aute irure
+                                dolor in reprehenderit in voluptate velit esse
+                                cillum dolore eu fugiat nulla pariatur. Excepteur
+                                sint occaecat cupidatat non proident, sunt in culpa
+                                qui officia deserunt mollit anim id est laborum."
+                            </p>
+                            <button type="button" class="btn btn-info">Feature 3</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ****** ~ ~ ~ Footer ~ ~ ~ ****** -->
+    <footer class="col">
+        <nav class="navbar navbar-expand-sm bg-dark">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a href="TODO.html" class="nav-link">Help</a>
+                </li>
+                <li class="nav-item">
+                    <a href="TODO.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="TODO.html" class="nav-link">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                    <a href="TODO.html" class="nav-link">Disclaimer</a>
+                </li>
+            </ul>
+        </nav>
+    </footer>
 </body>
 </html>

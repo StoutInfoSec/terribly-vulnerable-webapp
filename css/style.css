@@ -1,120 +1,90 @@
-@charset "utf-8";
-/* CSS Document */
-/*This enables a fun, free font to spice things up*/
-@font-face{
-	font-family: "bitwise";
-	src: url("../fonts/Bitwise/Bitwise.ttf");
+html, body, header {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: #003B6f;
 }
 
-/*Link Behavior - Meant to look identical before and after visiting the link*/
-a:link{
-	/*unvisited link*/
-	color:black;
-	text-decoration: none;
-}
-a:visited{
-	/*visited link*/
-	color:black;
-	text-decoration: none;
-}
-a:hover{
-	/*
-		While the mouse is "hovering" over the link
-		This section MUST come after a:link, and a:visited for compile purposes
-	*/
-	color: blue;
-}
-a:active{
-	/*
-		Link is selected, the mouse button is currently clicking on the link
-		This section MUST come after a:hover, for compile purposes
-	*/
-	color: rebeccapurple;
+header {
+    position: absolute;
+    top: 0;
+    height: 85px;
 }
 
-header{
-	width: 100%;
-	min-height: 160px;
-	height: auto;
-	background-color: #003B6f;
+footer {
+    position: -webkit-sticky;
+    position: sticky;
+    bottom: 0;
 }
 
-#logo{
-	height: 120px;
-	width: auto;
-	margin: 20px 30px;
-	display: inline;
-	/*border: solid black thin;*/
-	float: left;
+div h1 {
+    text-align: center;
 }
 
-nav{
-	width: 19%;
-	height: 500px;
-	overflow: scroll;
-	display: inline-block;
-	float: left;
+#body-div {
+    height: 100%;
+    width: 90%;
+    margin: auto;
+    background-color: snow;
 }
 
-footer{
-	background-color: lightgray;
-	width: 100%;
-	padding: 25px 30px;
-	clear: left;
+#card-box {
+    width: 100%;
+    height: 100%;
+    margin: auto;
 }
 
-#content{
-	background-color: lightgoldenrodyellow;
-	width: 80%;
-	height: 493px;
-	display: inline-block;
-	position: relative;
-	
-	border: 3px black solid;
+#card-div {
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+    text-align: center;
 }
 
-#list-title{
-	font-family: "bitwise";
-	font-size: 20px;
-	list-style-type: none;
+#card-img {
+    height: 250px;
+    width: 250px;
+    margin: auto;
 }
 
-#userAid{
-	/*The two buttons, "Hint?" and "Learn More"*/
-	height: auto;
-	width: auto;
-	position: absolute;
-	bottom: 0;
-	right: 0;
+#card-row {
+    margin: auto;
+    padding-top: 2%;
+    margin-bottom: 2%;
 }
 
-.tabs{
-	font-size: auto;
-	display: inline-block;
-	padding: 10px;
-	border: medium solid black;
-	border-radius: 50px;
-	margin: auto, 20px;
-	margin-left: 5%;
-	font-family: "bitwise", sans-serif;
-	clear: left;
+#featured {
+    margin: 2%;
 }
 
-.infoButtons{
-	display: inline-block;
-	padding: 10px;
-	margin: 10px 20px;
-	border: medium black solid;
-	border-radius: 10px;
-	float: right;
+#feature-list {
+    margin-top: 3%;
+    margin-bottom: 3%;
 }
 
-.section{
-	text-decoration: none;
-	list-style-type: none;
+#floatingUI {
+    position: absolute;
+    right: 0;
 }
 
-.challenge{
-	text-decoration: none;
-	color: black;
+#logo {
+    height: 60px;
+    width: 100px;
+    float: left;
+    margin: auto;
+}
+
+#page-hdr {
+    text-align: center;
+    width: 100%;
+}
+
+/*#search-bar {
+    position: absolute;
+    right: 0;
+    padding-right: 2%;
+}*/
+
+.toolbar {
+    min-width: 700px;
 }
