@@ -1,1 +1,3 @@
 required programs:
+virtualbox
+bitnami 7.1.14

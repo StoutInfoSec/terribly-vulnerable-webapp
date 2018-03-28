@@ -2,7 +2,7 @@
 class dynamic_DB {
 	public $id;
 	public $conn;
-	private $servername = "127.0.0.1";
+	private $servername = "localhost";
 	private $username = "root";
 	private $password = "";
 	
@@ -23,18 +23,53 @@ class dynamic_DB {
 		} 
 		else {
 			echo "Error creating database: " . $this->conn->error;
-		}		
+		}
+		
+		$this->conn->select_db($this->id);
 	}
 	
 	function __destruct(){
 		$sql = "DROP DATABASE " . ($this->id);
 		if ($this->conn->query($sql) === TRUE) {
 			echo "Database destroyed successfully\n";
+			$this->conn->close();
+			return 0;
 		} 
 		else {
 			echo "Error destroying database: " . $this->conn->error;
+			$this->conn->close();
+			return 1;
 		}	
-		$this->conn->close();
+		
+	}
+	
+	public function basic_query($command){
+		$sql = $command;
+		if ($this->conn->query($sql) === TRUE) {
+			echo "Query ran successfully\n";
+			return 0;
+		} 
+		else {
+			echo "Error with query: " . $this->conn->error;
+			return 1;
+		}	
+	}
+	public function populate_users(){
+		$sql = "CREATE TABLE users (userID INT primary key NOT NULL AUTO_INCREMENT, username VARCHAR(20), password VARCHAR(20))";
+		$this->basic_query($sql);
+		$fake_names = array(
+			"john" => "FooBar",
+			"l33tman" => "4iohf32ioh2f",
+			"BillerKiller" => "password123",
+			"debug" => "Stout4Life!",
+		);
+		
+		foreach($fake_names as $name => $password){
+			$sql = "INSERT INTO users (username, password) VALUES ('$name', '$password')";
+			$this->basic_query($sql);
+		}
+		
+		return 0;
 	}
 	
 	public function get_ID(){
@@ -45,9 +80,4 @@ class dynamic_DB {
 		return $this->conn;
 	}
 }
-
-$DB = new dynamic_DB();
-echo $DB->get_ID(). "\n";
-unset($DB);
-echo "goodbye";
 ?>
