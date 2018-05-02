@@ -31,12 +31,12 @@
                 <div class="row" id="card-row">
                     <div class="col">
                         <div class="card bg-light" id="card-div">
-                            <div class="card-header">Challenge Card</div>
+                            <div class="card-header">SQL Challenge 1</div>
                             <img id="card-img" class="card-img-top" src="images/card_004.png"
                                  alt="Challenge image" />
                             <div class="card-body">
-                                <h4 class="card-title"><small>Challenge Name</small></h4>
-                                <p class="card-text"><small>Short Challenge Description</small></p>
+                                <h4 class="card-title"><small>Basic SQL Injectoin</small></h4>
+                                <p class="card-text"><small>Can you bypass the login?</small></p>
                                 <a href="/challenges/sql/level_1.php" class="btn btn-primary">Attempt Challenge</a>
                             </div>
                         </div>

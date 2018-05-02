@@ -2,7 +2,7 @@ html, body, header {
     height: 100%;
     width: 100%;
     position: absolute;
-    background-color: #003B6f;
+    background-color: #efeded;
 }
 
 header {
@@ -87,4 +87,8 @@ div h1 {
 
 .toolbar {
     min-width: 700px;
+}
+
+a {
+    color: #eaeaea !important
 }

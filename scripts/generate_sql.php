@@ -19,7 +19,7 @@ class dynamic_DB {
 		$sql = "CREATE DATABASE " . ($this->id);
 		
 		if ($this->conn->query($sql) === TRUE) {
-			echo "Database created successfully\n";
+			//echo "Database created successfully\n";
 		} 
 		else {
 			echo "Error creating database: " . $this->conn->error;
@@ -31,7 +31,7 @@ class dynamic_DB {
 	function __destruct(){
 		$sql = "DROP DATABASE " . ($this->id);
 		if ($this->conn->query($sql) === TRUE) {
-			echo "Database destroyed successfully\n";
+			//echo "Database destroyed successfully\n";
 			$this->conn->close();
 			return 0;
 		} 
@@ -46,7 +46,7 @@ class dynamic_DB {
 	public function basic_query($command){
 		$sql = $command;
 		if ($this->conn->query($sql) === TRUE) {
-			echo "Query ran successfully\n";
+			//echo "Query ran successfully\n";
 			return 0;
 		} 
 		else {

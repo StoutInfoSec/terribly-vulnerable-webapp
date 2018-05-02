@@ -23,13 +23,7 @@
         <div class="jumbotron" id="page-hdr">
             <h1>Featured</h1>
             <p>
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                sunt in culpa qui officia deserunt mollit anim id est laborum."
+                Welcome to Information Security Professional's Terribly Vulnerable Web Application! Below are some of our featured challenges.
             </p>
         </div>
         <div class="well well-lg" id="card-box">
@@ -40,19 +34,11 @@
                     </div>
                     <div class="media-body">
                         <div class="media-heading">
-                            <h3>Featured Item #1</h3>
+                            <h3>Basic SQL Injection</h3>
                             <p>
-                                "Lorem ipsum dolor sit amet, consectetur adipiscing
-                                elit, sed do eiusmod tempor incididunt ut labore et
-                                dolore magna aliqua. Ut enim ad minim veniam, quis
-                                nostrud exercitation ullamco laboris nisi ut
-                                aliquip ex ea commodo consequat. Duis aute irure
-                                dolor in reprehenderit in voluptate velit esse
-                                cillum dolore eu fugiat nulla pariatur. Excepteur
-                                sint occaecat cupidatat non proident, sunt in culpa
-                                qui officia deserunt mollit anim id est laborum."
+                                You have no idea what the username or password could possibly be, but perhaps the developer made some errors while making his own custom login page... bypass the login by using a simple SQL injection query!
                             </p>
-                            <button type="button" class="btn btn-info">Feature 1</button>
+                            <button type="button" onclick="location.href='/challenges/sql/level_1.php';" class="btn btn-info">Attempt</button>
                         </div>
                     </div>
                 </div>
